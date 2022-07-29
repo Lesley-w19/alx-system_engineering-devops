@@ -9,3 +9,4 @@
 7. Highlander
 8. Beheaded process
 9. Process and PID file
+10. Manage my process

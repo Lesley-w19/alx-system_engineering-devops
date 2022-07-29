@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+#The general minimum set of instructions is: start, restart and stop.
+#When passing the argument start: Starts manage_my_process,Creates a file containing its PID in /var/run/my_process.pid,Displays manage_my_process started.
+#When passing the argument stop: Stops manage_my_process,Deletes the file /var/run/my_process.pid,Displays manage_my_process stopped.
+#When passing the argument restart: Stops manage_my_process,Deletes the file /var/run/my_process.pid,Starts manage_my_process,Creates a file containing its PID in /var/run/my_process.pid
+
+case $action in
+	"start")
+		./manage_my_process &
+		sudo sh -c "echo $$ > /var/run/my_process.pid"
+		echo "manage_my_process started"
+	;;
+
+   	 "stop")
+		pkill -SIGKILL -f "manage_my_process"
+		sudo rm /var/run/my_process.pid 
+		echo "manage_my_process stopped"
+	;;
+
+   	 "restart")
+		pkill -SIGKILL -f "manage_my_process"
+                if [ -e /var/run/my_process.pid ];
+		then
+			sudo rm /var/run/my_process.pid
+		./manage_my_process
+		sudo sh -c "echo $$ > /var/run/my_process.pid"
+		echo "manage_my_process restarted"
+	;;
+
+*)
+		echo "Usage: manage_my_process {start|stop|restart}"
+	;;
+esac	
