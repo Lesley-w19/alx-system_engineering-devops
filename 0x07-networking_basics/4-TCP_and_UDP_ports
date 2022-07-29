@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
+#a bash script to show pid
 netstat -lp
