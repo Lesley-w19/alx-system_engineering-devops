@@ -7,3 +7,4 @@
 5. 4 bad luck, 8 is your chance
 6. Superstitious numbers
 7. Clock
+8. For ls
