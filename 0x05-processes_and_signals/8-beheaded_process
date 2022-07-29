@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+#a bash script that kills the rocess 7-highlander
+pkill -SIGKILL -f "7-highlander"
