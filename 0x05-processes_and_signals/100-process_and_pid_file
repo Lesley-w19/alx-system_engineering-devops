@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #a Bash script that:Creates the file /var/run/myscript.pid containing its PID,Displays To infinity and beyond indefinitely,Displays I hate the kill command when receiving a SIGTERM signal,Displays Y U no love me?! when receiving a SIGINT signal,Deletes the file /var/run/myscript.pid and terminates itself when receiving a SIGQUIT or SIGTERM signal
 
-trap add_int INT
+trap ctrl_c INT
 trap kill_pr SIGTERM SIGQUIT
 
-function add_int()
+function ctrl_c()
 {
 	echo "Y U no love me?!"
 }
