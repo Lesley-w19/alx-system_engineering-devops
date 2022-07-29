@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
-#Share your public key in your answer file
+#!/usr/bin/env
+#Share your public key in your answer file 
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDqlYQcpdhoCDjX/+Rnht5EDfu9a1A0gK0rfluD/CP3SIoaQ9Nb4Hxts6FyzhrbN2fvnEtUtubLmBsSM2XVvILcSdToUKDCfG1zCVKtYQIDXNfnW1+hwY8+mwjAL+XOihN+RAuvJkDmiFRqXT8yY+UWddmKzyWL393naSHmIx+b5dEky2az/VtX/jWca7nKUu2XO3xfhxDLPm5zrvGKwN9ItrT//84O7bAdSwA1fjYnxeijkzexwp1Kvza+FpiO1gA20vP8i+FS3AcuUvFg0vkSFhRPV8JxLrxvoE9b8dxrzT+mqOxetkbiXKwjUfRP6mGSyfLD92hWLeDO2UryR8JmJPkkT+WPpuMU4CjDu0+Umygb2Bs7ZIAzW/dRys37+4wZ54HowfC4egbYEdS9SkZGn3QowAXE6+OkutRyzfH+9jIw3wV8qzBdjW3kziyVTStiCQOmw1sxH+GtZeCJiOyZFTayF0ljUJ9J8Vk7EFbm1VbuKyP3p8gaqOvx8+bZHlM= root@wanjiku
