@@ -10,3 +10,4 @@
 8. For ls
 9. To file, or not to file
 10. FizzBuzz
+11. Read and cut
