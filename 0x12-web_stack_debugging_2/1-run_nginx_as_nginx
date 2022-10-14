@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # a script that configures the container with nginx user, port 8080
 pkill -f apache2
-sudo chown 777 /etc/nginx/nginx.conf
+sudo chown 644 /etc/nginx/nginx.conf
 sudo chown nginx:nginx /etc/nginx/nginx.conf
-sudo sed -i "s/80 default_server/8080 default_server/g" /etc/nginx/site-available/default
+sudo sed -i 's/80 default_server/8080 default_server/g' /etc/nginx/sites-available/default
 sudo -u nginx service nginx restart
