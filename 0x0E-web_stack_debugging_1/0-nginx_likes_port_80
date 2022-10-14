@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# creating symbolic links on the files
+ln -s /etc/nginx/sites-available/default /etc/nginx/sites-enabled
+sudo service nginx restart
