@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# install the ufw firewall and setup a few rules on web-01
+sudo allow 22
+sudo allow 443
+sudo allow 80
+sudo ufw enable
