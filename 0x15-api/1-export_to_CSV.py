@@ -30,9 +30,8 @@ def main():
 
     with open('{}.csv'.format(employee_id), 'w') as csvfile:
         my_writer = csv.writer(
-            csvfile, delimiter=",",
-            quotechar='"', quoting=csv.QUOTE_ALL,
-            lineterminator="\n"
+            csvfile, lineterminator="\n",
+            quotechar='"', quoting=csv.QUOTE_ALL
         )
 
         for data in employee_todos:
