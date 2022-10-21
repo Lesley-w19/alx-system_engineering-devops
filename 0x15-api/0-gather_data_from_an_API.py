@@ -14,7 +14,7 @@ from sys import argv
 def main():
     base_url = "https://jsonplaceholder.typicode.com"
     employee_id = argv[1]
-    
+
     all_employees = requests.get(
         "{}/users/{}".format(
             base_url,
@@ -33,12 +33,12 @@ def main():
         )
     ).json()
 
-    for tasks in employee_todos: 
+    for tasks in employee_todos:
         total_tasks += 1
         completed = tasks.get('completed')
 
-        if completed == True:
-            completed_tasks += 1          
+        if completed is True:
+            completed_tasks += 1        
 
     print("Employee {} is done with tasks({}/{}):\
         ".format(employee_name, completed_tasks, total_tasks))
@@ -46,7 +46,7 @@ def main():
     print('\n'.join(
         ['\t ' + tasks.get('title')
          for tasks in employee_todos
-         if tasks.get('completed') == True
+         if tasks.get('completed') is True
          ]
     ))
 
