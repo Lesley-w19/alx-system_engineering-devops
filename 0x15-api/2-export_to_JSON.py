@@ -35,12 +35,12 @@ def main():
     for data in employee_todos:
         json_task_data.append(
             {
-                "task" : data.get("title"),
+                "task": data.get("title"),
                 "completed": data.get("completed"),
-                "username" : employee_name,
+                "username": employee_name,
             }
         )
-        
+
     dictionary[employee_id] = json_task_data
     json_object = json.dumps(dictionary)
 
