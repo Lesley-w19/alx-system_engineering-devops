@@ -28,7 +28,7 @@ def main():
 
     json_task_data = []
     dictionary = {}
-    
+
     for employee in all_employees:
         for todo in all_todos:
             if todo.get('userId') == employee.get('id'):
@@ -39,9 +39,9 @@ def main():
                         "completed": todo.get('completed')
                     }
                 )
-                
+       
         dictionary[employee.get('id')] = json_task_data
-    
+
     json_object = json.dumps(dictionary)
 
     with open("todo_all_employees.json", "w") as jsonfile:
