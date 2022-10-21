@@ -39,7 +39,7 @@ def main():
                         "completed": todo.get('completed')
                     }
                 )
-       
+
         dictionary[employee.get('id')] = json_task_data
 
     json_object = json.dumps(dictionary)
