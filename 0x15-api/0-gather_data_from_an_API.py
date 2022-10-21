@@ -38,7 +38,7 @@ def main():
         completed = tasks.get('completed')
 
         if completed is True:
-            completed_tasks += 1        
+            completed_tasks += 1
 
     print("Employee {} is done with tasks({}/{}):\
         ".format(employee_name, completed_tasks, total_tasks))
