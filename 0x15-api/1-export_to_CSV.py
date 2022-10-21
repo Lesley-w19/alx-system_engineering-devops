@@ -26,7 +26,7 @@ def main():
             base_url,
             employee_id
         )
-    ).json().get('name')
+    ).json().get('username')
 
     with open('{}.csv'.format(employee_id), 'w') as csvfile:
         my_writer = csv.writer(

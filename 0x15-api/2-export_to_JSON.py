@@ -27,7 +27,7 @@ def main():
             base_url,
             employee_id
         )
-    ).json().get('name')
+    ).json().get('username')
 
     json_task_data = []
     dictionary = {}
