@@ -2,3 +2,4 @@
 
 ### TASKS
 0-simple_web_stack
+1. Distributed web infrastructure
