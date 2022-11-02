@@ -18,7 +18,7 @@ def recurse(subreddit, hot_list=[], after=''):
     params = {
         'after': after
     }
-    
+
     try:
         if after is None:
             return
@@ -31,20 +31,20 @@ def recurse(subreddit, hot_list=[], after=''):
             headers=headers,
             params=params
         )
-        
+
         if response.status_code != 200:
             return None
-        
+
         res = response.json()['data']
         after = res['after']
         
         children_data = response.json()['data']['children']
-        
+
         if len(children_data) == 0:
             return None
         else:
             for post in children_data:
-                
+
                 hot_list.append(post['data']['title'])
                 
             recurse(subreddit, hot_list, after)
