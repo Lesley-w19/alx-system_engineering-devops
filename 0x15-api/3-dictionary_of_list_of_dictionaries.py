@@ -42,8 +42,8 @@ def main():
                     }
                 )
     
-    
-    dictionary[employee.get('id')] = json_task_data
+    userId = employee.get('id')
+    dictionary[str(userId)] = json_task_data
     json_object = json.dumps(dictionary)
 
     with open("todo_all_employees.json", "w") as jsonfile:
