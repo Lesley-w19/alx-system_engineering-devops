@@ -43,10 +43,10 @@ def main():
 
     userId = employee.get('id')
     dictionary[str(userId)] = json_task_data
-    
+    json_object = json.dumps(dictionary)
 
     with open("todo_all_employees.json", "w") as jsonfile:
-        json.dump(dictionary, jsonfile)
+        jsonfile.write(json_object)
 
 
 if __name__ == "__main__":
