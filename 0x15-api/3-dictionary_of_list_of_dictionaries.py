@@ -33,13 +33,13 @@ def main():
             ).json()
         json_task_data = []
         for todo in all_todos:
-                json_task_data.append(
-                    {
-                        "username": username,
-                        "task": todo.get("title"),
-                        "completed": todo.get('completed')
-                    }
-                )
+            json_task_data.append(
+                {
+                    "username": username,
+                    "task": todo.get("title"),
+                    "completed": todo.get('completed')
+                }
+            )
 
         dictionary[str(userId)] = json_task_data
 
