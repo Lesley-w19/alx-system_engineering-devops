@@ -32,7 +32,6 @@ def main():
     for employee in all_employees:
 
         for todo in all_todos:
-            
             if todo.get('userId') == employee.get('id'):
                 json_task_data.append(
                     {
@@ -41,7 +40,7 @@ def main():
                         "completed": todo.get('completed')
                     }
                 )
-    
+
     userId = employee.get('id')
     dictionary[str(userId)] = json_task_data
     json_object = json.dumps(dictionary)
