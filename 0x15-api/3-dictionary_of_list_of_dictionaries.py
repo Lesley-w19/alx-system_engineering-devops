@@ -14,35 +14,35 @@ from sys import argv
 def main():
     base_url = "https://jsonplaceholder.typicode.com"
 
-    all_todos = requests.get(
-        "{}/todos/".format(
-            base_url,
-        )
-    ).json()
-
     all_employees = requests.get(
         "{}/users/".format(
             base_url
         )
     ).json()
 
-    json_task_data = []
     dictionary = {}
 
     for employee in all_employees:
-
+        username = employee.get('username')
+        userId = employee.get('id')
+        all_todos = requests.get(
+            "{}/todos?userId={}".format(
+                base_url,
+                userId
+            )
+            ).json()
+        json_task_data = []
         for todo in all_todos:
-            if todo.get('userId') == employee.get('id'):
                 json_task_data.append(
                     {
-                        "username": employee.get('username'),
+                        "username": username,
                         "task": todo.get("title"),
                         "completed": todo.get('completed')
                     }
                 )
 
-    userId = employee.get('id')
-    dictionary[userId] = json_task_data
+        dictionary[str(userId)] = json_task_data
+
     json_object = json.dumps(dictionary)
 
     with open("todo_all_employees.json", "w") as jsonfile:
