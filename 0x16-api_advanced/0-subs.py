@@ -12,16 +12,19 @@ import requests
 
 
 def number_of_subscribers(subreddit):
-    base_url = 'https://www.reddit.com/'
+    base_url = 'https://www.reddit.com'
     headers = {
-        'User-Agent': 'Mozilla/5.0',
+        'User-Agent': 'Mozilla/5.0'
     }
 
     try:
         response = requests.get(
-            url= '{}/r/{}/about.json'.format(base_url,subreddit),
-            headers= headers 
-            );
+            url='{}/r/{}/about.json'.format(
+                base_url,
+                subreddit
+                ),
+            headers=headers
+            )
 
         if response.status_code != 200:
             return (0)
