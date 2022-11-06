@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # a script that configures the container with nginx user, port 8080
+# dont run command as root user
 chmod 777 /etc/nginx/nginx.conf
 sed -i "s/80/8080/g" /etc/nginx/sites-available/default
 sed -i "s/#user www-data/user nginx/" /etc/nginx/nginx.conf
