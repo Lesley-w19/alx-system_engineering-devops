@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+#Create a MySQL backup
+
+if [ "$#" -ne 1 ]; then
+    echo "Usage: 5-mysql_backup PASSWORD"
+    exit 0
+fi
+
+DATE = $(date '+%d-%m-%Y')
+COMPRESS_NAME = "${DATE}.tar.gz"
+
+mysqldump -u root -p"$1" --all-databases > "backup.sql"
+
+tar -czvf "${COMPRESS_NAME}" "backup.sql"

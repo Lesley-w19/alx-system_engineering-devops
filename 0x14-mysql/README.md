@@ -32,3 +32,4 @@ Provide your MySQL primary configuration as answer file(my.cnf or mysqld.cnf) wi
 ----
 Provide your MySQL replica configuration as an answer file with the name 4-mysql_configuration_replica
 
+5. MySQL backup
