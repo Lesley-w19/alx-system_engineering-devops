@@ -11,4 +11,4 @@ COMPRESS_NAME = "${DATE}.tar.gz"
 
 mysqldump -u root -p"$1" --all-databases > "backup.sql"
 
-tar -czvf "${COMPRESS_NAME}" "backup.sql"
+tar -cvzf "${COMPRESS_NAME}" "backup.sql"
