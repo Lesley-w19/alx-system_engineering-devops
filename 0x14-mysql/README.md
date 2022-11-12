@@ -26,3 +26,7 @@ replica_user must have the appropriate permissions to replicate your primary MyS
 ----
 holberton_user will need SELECT privileges on the mysql.user table in order to check that replica_user was created with the correct permissions.
 
+4. Setup a Primary-Replica infrastructure using MySQL
+----
+Provide your MySQL primary configuration as answer file(my.cnf or mysqld.cnf) with the name 4-mysql_configuration_primary
+
