@@ -29,4 +29,6 @@ holberton_user will need SELECT privileges on the mysql.user table in order to c
 4. Setup a Primary-Replica infrastructure using MySQL
 ----
 Provide your MySQL primary configuration as answer file(my.cnf or mysqld.cnf) with the name 4-mysql_configuration_primary
+----
+Provide your MySQL replica configuration as an answer file with the name 4-mysql_configuration_replica
 
